@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d7b0d4e8-3217-4798-9ee1-a77da075b180" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Chihuo$0014_auto_20190224_0205.coverage" NAME="0014_auto_20190224_0205 Coverage Results" MODIFIED="1551012565382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shopping_mall/shopping/migrations" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2919">
+              <caret line="153" column="27" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/templates/list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="74" column="57" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/templates/homepage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1953">
+              <caret line="93" selection-start-line="93" selection-end-line="93" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/templates/detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2814">
+              <caret line="134" column="30" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/shopping_mall/shopping_mall/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1801">
+              <caret line="133" selection-start-line="133" selection-end-line="133" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shopping_mall/shopping_mall/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Add</find>
+      <find>Site_add</find>
+      <find>user1</find>
+      <find>dd_jump</find>
+      <find>foo</find>
+      <find>ss</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>i</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/migrations/urls.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/static/reset.css" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/static/homepage.css" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/templates/login.html" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/forms.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/templates/register.html" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/migrations/0014_auto_20190224_2321.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/migrations/0014_auto_20190224_2332.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/migrations/0014_auto_20190224_2337.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/static/js/jquery-3.3.1.js" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/templates/user_center_info.html" />
+        <option value="$PROJECT_DIR$/shopping_mall/admin/views.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/admin/urls.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping_mall/urls.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/static/css/homepage.css" />
+        <option value="$PROJECT_DIR$/shopping_mall/admins/templates/index.html" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/admin.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/admins/urls.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/models.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/admins/admin.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/admins/models.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/admins/views.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/templates/user_center_site.html" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/templatetags/category.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/templates/list.html" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/templates/detail.html" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/templates/list1.html" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/templates/homepage.html" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/templates/place_order.html" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/templates/user_center_order.html" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/urls.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/views.py" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping/templates/cart.html" />
+        <option value="$PROJECT_DIR$/shopping_mall/shopping_mall/settings.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="948" />
+    <option name="width" value="981" />
+    <option name="height" value="1032" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Chihuo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chihuo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chihuo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chihuo" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping_mall" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chihuo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chihuo" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping_mall" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chihuo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chihuo" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping_mall" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chihuo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chihuo" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping_mall" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chihuo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chihuo" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping_mall" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping_mall" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Chihuo\shopping_mall\admins\templates" />
+      <recent name="D:\Chihuo\shopping_mall\shopping\migrations" />
+      <recent name="D:\Chihuo\shopping_mall\shopping\static\css" />
+      <recent name="D:\Chihuo\shopping_mall\shopping\static" />
+      <recent name="D:\Chihuo\shopping_mall\shopping" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Chihuo\shopping_mall\shopping\static" />
+      <recent name="D:\Chihuo\shopping_mall\shopping\static\images" />
+      <recent name="D:\Chihuo\shopping_mall\shopping\static\js" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="PythonConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+    <option name="contentProportion" value="0.025641026" />
+  </component>
+  <component name="RunManager">
+    <configuration name="mydjango" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Chihuo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="shopping_mall.settings" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\zd199\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/shopping_mall" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d7b0d4e8-3217-4798-9ee1-a77da075b180" name="Default Changelist" comment="" />
+      <created>1549937797301</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1549937797301</updated>
+      <workItem from="1550765697163" duration="2019000" />
+      <workItem from="1550767735584" duration="1379000" />
+      <workItem from="1550769138469" duration="643000" />
+      <workItem from="1550769799214" duration="316000" />
+      <workItem from="1550770133114" duration="165000" />
+      <workItem from="1550770332644" duration="169000" />
+      <workItem from="1550770521510" duration="415000" />
+      <workItem from="1550770975972" duration="36000" />
+      <workItem from="1550795380171" duration="11000" />
+      <workItem from="1550795412167" duration="5739000" />
+      <workItem from="1550801603063" duration="1840000" />
+      <workItem from="1550803465038" duration="23075000" />
+      <workItem from="1550830006182" duration="343000" />
+      <workItem from="1550848151229" duration="996000" />
+      <workItem from="1550849761750" duration="139000" />
+      <workItem from="1550850190660" duration="810000" />
+      <workItem from="1550893794470" duration="37257000" />
+      <workItem from="1550982846886" duration="16989000" />
+      <workItem from="1551010709464" duration="12010000" />
+      <workItem from="1551022750684" duration="890000" />
+      <workItem from="1551023659559" duration="1370000" />
+      <workItem from="1551025357463" duration="306000" />
+      <workItem from="1551025725412" duration="3942000" />
+      <workItem from="1551054213540" duration="10043000" />
+      <workItem from="1551064293080" duration="24750000" />
+      <workItem from="1551092368184" duration="1620000" />
+      <workItem from="1551101051716" duration="9394000" />
+      <workItem from="1551110775511" duration="3537000" />
+      <workItem from="1551140340568" duration="33207000" />
+      <workItem from="1551185990255" duration="31611000" />
+      <workItem from="1551262357013" duration="4880000" />
+      <workItem from="1551276754305" duration="6351000" />
+      <workItem from="1551313645325" duration="2899000" />
+      <workItem from="1551316665997" duration="4713000" />
+      <workItem from="1551321802562" duration="648000" />
+      <workItem from="1551322571822" duration="4536000" />
+      <workItem from="1551331915154" duration="5000" />
+      <workItem from="1551331948809" duration="5667000" />
+      <workItem from="1551338816497" duration="469000" />
+      <workItem from="1551347768373" duration="91000" />
+      <workItem from="1551361356208" duration="743000" />
+      <workItem from="1551400388758" duration="7953000" />
+      <workItem from="1551429928305" duration="1639000" />
+      <workItem from="1551433369818" duration="911000" />
+      <workItem from="1551447469895" duration="3719000" />
+      <workItem from="1551486806739" duration="6556000" />
+      <workItem from="1551502952550" duration="404000" />
+      <workItem from="1551503392707" duration="7004000" />
+      <workItem from="1551515888098" duration="2045000" />
+      <workItem from="1551533064083" duration="503000" />
+      <workItem from="1551621549886" duration="10574000" />
+      <workItem from="1551667284919" duration="689000" />
+      <workItem from="1551669053312" duration="2426000" />
+      <workItem from="1551677219651" duration="483000" />
+      <workItem from="1551685694727" duration="206000" />
+      <workItem from="1552099881103" duration="658000" />
+      <workItem from="1552128423040" duration="19000" />
+      <workItem from="1552222802979" duration="108000" />
+      <workItem from="1552290920749" duration="29000" />
+      <workItem from="1552295893503" duration="655000" />
+      <workItem from="1552358280247" duration="141000" />
+      <workItem from="1554203858040" duration="543000" />
+      <workItem from="1554213183570" duration="2639000" />
+      <workItem from="1554624075119" duration="1204000" />
+      <workItem from="1554776249667" duration="517000" />
+      <workItem from="1554805527702" duration="49000" />
+      <workItem from="1554819531713" duration="593000" />
+      <workItem from="1554946444039" duration="910000" />
+      <workItem from="1554947976354" duration="69000" />
+      <workItem from="1554992046379" duration="2227000" />
+      <workItem from="1556239259929" duration="597000" />
+      <workItem from="1556257254247" duration="2879000" />
+      <workItem from="1556346188332" duration="559000" />
+      <workItem from="1556413248587" duration="4592000" />
+      <workItem from="1556429746570" duration="988000" />
+      <workItem from="1556431819713" duration="11000" />
+      <workItem from="1557282286737" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="321135000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20937753" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32984293" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.7417103" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39965096" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.05235602" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49636218" weight="0.05235602" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50363785" side_tool="true" weight="0.34554973" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32984293" />
+      <window_info anchor="bottom" id="Run Dashboard" order="11" weight="0.32984293" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32984293" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" weight="0.32984293" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.025869038" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32984293" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.12914485" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39965096" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.05235602" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49636218" weight="0.05235602" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50363785" side_tool="true" weight="0.34554973" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32984293" />
+      <window_info anchor="bottom" id="Run Dashboard" order="11" weight="0.32984293" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32984293" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" weight="0.32984293" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/static/js/jquery-1.12.4.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/static/js/jquery-3.3.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="6711" column="14" selection-start-line="6711" selection-start-column="14" selection-end-line="6711" selection-end-column="14" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms2.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="288" column="22" selection-start-line="288" selection-start-column="22" selection-end-line="288" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="360" column="16" selection-start-line="360" selection-start-column="16" selection-end-line="360" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <folding>
+            <element signature="e#22#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/rdfa.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="175" column="12" selection-start-line="175" selection-start-column="12" selection-end-line="175" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/phrase.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="63" column="14" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/embed.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/block.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="248" column="16" selection-start-line="248" selection-start-column="16" selection-end-line="248" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/static/css/homepage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="126" column="1" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/static/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/static/images/slide02.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/static/images/register_banner.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/static/images/slide.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/static/images/slide03.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/static/images/slide04.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/static/images/goods/释迦.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/static/images/goods/砂糖橘.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/static/images/goods/火龙果.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/templates/user_center_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/common.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="127" column="18" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/admins/static/css/page.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/admins/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" lean-forward="true" selection-start-line="2" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/admins/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/admins/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/admins/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/admins/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/templates/user_center_site.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1659">
+          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/templatetags/category.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/templates/user_center_order.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1029">
+          <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/templates/place_order.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2331">
+          <caret line="111" column="36" selection-start-line="111" selection-start-column="36" selection-end-line="111" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/admins/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/django/http/response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="287" column="8" selection-start-line="287" selection-start-column="8" selection-end-line="287" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/templates/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1031">
+          <caret line="166" lean-forward="true" selection-start-line="166" selection-end-line="166" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/templates/list1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/admins/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5938">
+          <caret line="384" column="17" selection-start-line="384" selection-start-column="17" selection-end-line="384" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/django/contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1268">
+          <caret line="287" column="6" selection-start-line="287" selection-start-column="6" selection-end-line="287" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2919">
+          <caret line="153" column="27" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/templates/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1953">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/templates/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2814">
+          <caret line="134" column="30" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping_mall/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping/templates/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="74" column="57" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopping_mall/shopping_mall/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1801">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2032" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

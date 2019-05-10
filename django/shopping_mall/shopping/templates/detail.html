@@ -1,0 +1,202 @@
+{% extends "homepage.html" %}
+{% load static category %}
+{% block main %}
+	<div class="search_bar clearfix">
+		<a href="{% url 'homepage' %}" class="logo fl"><img src="{% static 'images/logo.png' %}"></a>
+		<div class="search_con fl">
+            <form action="{% url 'search' %}">
+			<input type="text" class="input_text fl" name="p" placeholder="搜索商品">
+			<input type="submit" class="input_btn fr" name="" value="搜索">
+            </form>
+		</div>
+		<div class="guest_cart fr">
+			<a href="{% url 'cart' %}" class="cart_name fl">我的购物车</a>
+
+            <div class="goods_count fl" id="show_count">{{ num }}</div>
+		</div>
+	</div>
+	<div class="navbar_con">
+		<div class="navbar clearfix">
+			<div class="subnav_con fl">
+				<h1>全部商品分类</h1>	
+				<span></span>			
+				<ul class="subnav">
+                    {% get_categories as categories %}
+                    {% for category in categories %}
+					    <li><a href="{% url 'list' category.id %}" class="{{ category.icon }}">{{ category.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+			<ul class="navlist fl">
+				<li><a href="{% url 'homepage' %}">首页</a></li>
+				<li class="interval">|</li>
+				<li><a href="">手机生鲜</a></li>
+				<li class="interval">|</li>
+				<li><a href="">抽奖</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="breadcrumb">
+		<a href="#">全部分类</a>
+		<span>></span>
+		<a href="">{{ fl.name }}</a>
+		<span>></span>
+		<a href="#">商品详情</a>
+	</div>
+{% block fenlei %}
+	<div class="goods_detail_con clearfix">
+		<div class="goods_detail_pic fl"><img src="{{ MEDIA_URL }}{{ xq.img1 }}" style="width:100%;height:100%;"></div>
+
+		<div class="goods_detail_list fr">
+			<em id="id1" style="display:none;">{{ xq.id }}</em>
+			<h3>{{ xq.name }}</h3>
+			<p>天天生鲜向您保证所售商品均为正品行货，天天生鲜自营商品开具机打发票或电子发票。</p>
+			<div class="prize_bar">
+				<span class="show_pirze">¥<em id="danjia">{{ xq.price }}</em></span>
+				<span class="show_unit">单  位：500g</span>
+			</div>
+			<div class="goods_num clearfix">
+				<div class="num_name fl">数 量：</div>
+				<div class="num_add fl">
+					<input type="text" class="num_show fl" value="1" id="shuliang">
+					<a href="javascript:;" class="add fr" id="jiahao">+</a>
+					<a href="javascript:;" class="minus fr" id="jianhao">-</a>
+				</div> 
+			</div>
+			<div class="total">总价：<em id="zongjia">{{ xq.price }}</em>元</div>
+			<div class="operate_btn">
+				<a href="javascript:;" class="buy_btn" id="buy_btn">立即购买</a>
+				{% if user.is_authenticated %}
+					<a href="javascript:;" class="add_cart" id="add_cart">加入购物车</a>
+				{% else %}
+					<a href="{% url 'shop' %}" class="add_cart">加入购物车</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	<div class="main_wrap clearfix">
+		<div class="l_wrap fl clearfix">
+			<div class="new_goods">
+				<h3>新品推荐</h3>
+				<ul>
+					{% for t in tj %}
+					<li>
+						<a href="{% url 'detail' t.id %}"><img src="{{ MEDIA_URL }}{{ t.img1 }}"></a>
+						<h4><a href="{% url 'detail' t.id %}">{{ t.name }}</a></h4>
+						<div class="prize">￥{{ t.price }}</div>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+
+		<div class="r_wrap fr clearfix">
+			<ul class="detail_tab clearfix">
+				<li class="active">商品介绍</li>
+				<li>评论</li>
+			</ul>
+
+			<div class="tab_content">
+				<dl>
+					<dt>商品详情：</dt>
+					<dd>{{ xq.goods_info }}</dd>
+				</dl>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="add_jump"></div>
+
+	<script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
+	<script type="text/javascript">
+
+		$('#add_cart').click(function(){
+			var a=$('#shuliang').val();
+			var b=$('#id1').text();
+			console.log(a,b);
+			$.ajax({
+				url:'http://127.0.0.1:8000/shop/',
+				type:'get',
+				data:{
+					'num':a,
+					'id1':b
+				},
+				dataType:'json',
+				success:function (res) {
+					$(alert(res.b),$(window.location.reload()))}
+			})
+			return false
+		});
+
+		$('#jiahao').mousedown(function () {
+            var num = $('#shuliang').val();
+            if($('#shuliang').val() < 910)
+            {
+              	$('#shuliang').val(function () {
+                return num * 1 + 1;
+            	});
+			}
+			var num1 = parseInt($('#shuliang').val());
+		    var num2 = parseFloat($('#danjia').html());
+			$('#zongjia').html(function () {
+			    return ((num1*100)*(num2*100)/10000).toFixed(2);
+			});
+        });
+
+		$('#jianhao').mousedown(function () {
+            var num = $('#shuliang').val();
+            if($('#shuliang').val() > 1)
+            {
+              	$('#shuliang').val(function () {
+                return num * 1 - 1;
+            	});
+			}
+			var num1 = parseInt($('#shuliang').val());
+		    var num2 = parseFloat($('#danjia').html());
+			$('#zongjia').html(function () {
+			    return ((num1*100)*(num2*100)/10000).toFixed(2);
+			});
+        });
+
+		$('#shuliang').change(function(){
+		    $('#shuliang').val(function () {
+				return parseInt($('#shuliang').val());
+            });
+		    jieguo();
+		    if($('#shuliang').val()<1){
+			    $('#shuliang').val(1);
+				jieguo();
+			}
+			else if($('#shuliang').val() > 910){
+			    $('#shuliang').val(910);
+			    jieguo();
+			}
+		});
+
+		function jieguo() {
+		    var num1 = parseInt($('#shuliang').val());
+		    var num2 = parseFloat($('#danjia').html());
+			$('#zongjia').html(function () {
+			    return ((num1*100)*(num2*100)/10000).toFixed(2);
+			});
+        };
+
+		// $('#add_cart').mousedown(function () {
+		//
+		// 	location.href = "/cart/updatecart/add/0/45/"+$('#shuliang').val();
+		//
+        // });
+		//
+		$("#buy_btn").click(function(){
+			var a= [$('#shuliang').val()];
+			var b= [$('#id1').text()];
+			console.log(a,b);
+			$(this).attr('href','/goumai/?num=' + JSON.stringify(a) + '&ids=' + JSON.stringify(b));
+		});
+	</script>
+{% endblock %}
+{% endblock %}

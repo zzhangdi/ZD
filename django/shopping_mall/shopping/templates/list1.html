@@ -1,0 +1,100 @@
+{% extends "detail.html" %}
+{% load static category %}
+{% block fenlei %}
+	<div class="main_wrap clearfix">
+		<div class="l_wrap fl clearfix">
+			<div class="new_goods">
+				<h3>新品推荐</h3>
+				<ul>
+                    {% for t in tj %}
+					<li>
+						<a href="{% url 'detail' t.id %}"><img src="{{ MEDIA_URL }}{{ t.img1 }}"></a>
+						<h4><a href="{% url 'detail' t.id %}">{{ t.name }}</a></h4>
+						<div class="prize">￥{{ t.price }}</div>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+
+		<div class="r_wrap fr clearfix">
+			<div class="sort_bar">
+				<a href="#" class="active">默认</a>
+				<a href="#">价格</a>
+				<a href="#">人气</a>
+			</div>
+
+			<ul class="goods_type_list clearfix">
+            {% if page %}
+                {% for i in page %}
+				<li>
+					<a href="{% url 'detail' i.id %}"><img src="{{ MEDIA_URL }}{{ i.img1 }}"></a>
+					<h4><a href="{% url 'detail' i.id %}">{{ i.name }}</a></h4>
+
+					<div class="operate">
+						<span class="prize">￥{{ i.price }}</span>
+						<span class="unit">{{ i.price }}/{{ i.unit }}</span>
+						<a href="javascript:;" class="add_goods" title="加入购物车"> </a>
+                        <input style="display: none" type="text" id="id_list" value="{{ i.id }}">
+                            <em style="display: none" id="fl">{{ fl.id }}</em>
+                        <em style="display: none" id="fl1">{{ b }}</em>
+					</div>
+				</li>
+                {% endfor %}
+            {% else %}
+                <div style="text-align:center;font-size: 18px;color: #c6c6c5">没有与此信息相关的商品</div>
+            {% endif %}
+            </ul>
+			<div class="pagenation">
+                {% if page.has_previous %} //判断前面是否还有页面
+                    <a href="{% url 'list' fl.id page.previous_page_number %}"> <上一页 </a>
+                {% endif %}
+                {% if page.paginator.num_pages > 3 %}
+                    {% for i in page.paginator.page_range|slice:"0:3" %}
+                        <a href="{% url 'list' fl.id i %}" class="active">{{ i }}</a>
+                    {% endfor %}
+                    <!--<a>......</a>-->
+                    <a href="{% url 'list' fl.id page.paginator.num_pages %}">{{ page.paginator.num_pages }}</a>
+                {% else %}
+                    {% for i in students.paginator.page_range %}
+                        <a href="{% url 'list' fl.id i %}">{{ i }}</a>
+                    {% endfor %}
+                {% endif %}
+                {% if page.has_next %}
+                    <a href="{% url 'list' fl.id page.next_page_number %}">下一页></a>
+                {% endif %}
+			</div>
+		</div>
+	</div>
+
+
+    <script type="text/javascript" src="{% static 'js/jquery-3.3.1.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
+
+
+	<script>
+        $('.add_goods').click(function(){
+			var a= parseInt(1);
+			var b=parseInt($(this).next('#id_list').val());
+			var c=parseInt($('#fl').html());
+			var d=parseInt($('#fl1').html());
+			console.log(a,b); //在控制台Console查看数据
+			$.ajax({
+				url:'http://127.0.0.1:8000/shop/',
+				type:'get',
+				data:{
+					'num':a,
+					'id1':b
+				},
+				dataType:'json',
+				success:function (res) {
+					$(window.location.reload())}
+                    {#alert(res.b),$(location).attr('href','http://127.0.0.1:8000/list/'+ c + '%3F' + d  + '/')}#}
+            });
+			return false
+		});
+    </script>
+{% endblock %}
+
+

@@ -1,0 +1,118 @@
+{% extends "cart.html" %}
+{% load static %}
+{% block qian %}
+	<div class="search_bar clearfix">
+		<a href="{% url 'homepage' %}" class="logo fl"><img src="{% static 'images/logo.png' %}"></a>
+		<div class="sub_page_name fl">|&nbsp;&nbsp;&nbsp;&nbsp;用户中心</div>
+    {% endblock %}
+    {% block hou %}
+	</div>
+
+	<div class="main_con clearfix">
+		<div class="left_menu_con clearfix">
+			<h3>用户中心</h3>
+			<ul>
+				<li><a href="{% url 'user_center_info' %}">· 个人信息</a></li>
+				<li><a href="{% url 'user_center_order' %}" class="active">· 全部订单</a></li>
+				<li><a href="{% url 'user_center_site' %}">· 收货地址</a></li>
+			</ul>
+		</div>
+		<div class="right_content clearfix">
+				<h3 class="common_title2">全部订单</h3>
+            {% if dd %}
+                {% for i in dd %}
+				<ul class="order_list_th w978 clearfix">
+					<li class="col01">{{ i.ctime }}</li>
+					<li class="col02">订单号:<em>{{ i.itmes }}</em></li>
+{#                    <input type="text" style="display: none" class="dd" data-id="{{ i.id }}">#}
+					<li class="col02 stress">{{ i.get_order_status_display }}</li>
+				</ul>
+
+				<table class="order_list_table w980">
+					<tbody>
+						<tr>
+							<td width="55%" class="hh hi">
+                                {% for j in i.order_goods_set.all %}
+                                    <ul class="order_goods_list clearfix">
+                                        <li class="col01"><img src="{{ MEDIA_URL }}{{ j.goods.img1 }}"></li>
+                                        <li class="col02">{{ j.goods.name }}<em class="price">{{ j.goods.price }}</em>元/{{ i.goods.unit }}</li>
+                                        <li class="col03">{{ j.num1 }}</li>
+                                        <li class="col04"></li>
+                                    </ul>
+                                {% endfor %}
+							</td>
+							<td width="15%" class="zongjia"></td>
+							<td width="15%">{{ i.get_order_status_display }}</td>
+							<td width="15%"><a href="#" class="oper_btn">{{ i.get_status_display }}</a>
+                            <input style="display: none" type="text" id="dd" value="{{ i.id }}">
+                            </td>
+						</tr>
+					</tbody>
+				</table>
+                {% endfor %}
+				<div class="pagenation">
+					<a href="#"><上一页</a>
+					<a href="#" class="active">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">下一页></a>
+				</div>
+            {% else %}
+                <h1 style="text-align:center;font-size: 16px;color: #c6c6c5">您的还没有购买过商品！</h1>
+            {% endif %}
+		</div>
+	</div>
+
+    <script>
+        $('.oper_btn').click(function () {
+        var data=[];
+        var a=parseInt($(this).next('#dd').val());
+        data.push(a);
+			console.log(a); //在控制台Console查看数据
+        $(this).attr('href', '/qfk/?id=' + JSON.stringify(data));
+        });
+
+        //计算小计
+        xiaoji();
+        function xiaoji(){
+            $('.hi').change(function(){
+                var xiaoji=0;
+                $(this).find('.order_goods_list').find('.price').each(function () {
+                    var num1 = parseFloat($(this).text());
+                    var num2 = parseInt($(this).parent().next('.col03').text());
+                    console.log(num1,num2);
+                    xiaoji = ((num1*100)*(num2*100)/10000).toFixed(2)+'元';
+                    console.log(xiaoji);
+                    $(this).parent().next().next('.col04').text(xiaoji);
+                });
+            })
+         }
+
+        $('.col01').ready(function () {
+            $('.hi').change()
+         });
+
+        //总金额
+        zongji();
+        function zongji(){
+            $('.hh').change(function () {
+                var zongjia=0;
+                $(this).find('.order_goods_list').find('.col04').each(function () {
+                    zongjia += parseFloat($(this).text());
+                });
+                $(this).next('.zongjia').text((zongjia).toFixed(2) + '元');
+                console.log(zongjia);
+            });
+         }
+
+        $('.ul').ready(function () {
+            $('.hh').change()
+         })
+
+
+
+    </script>
+
+{% endblock %}

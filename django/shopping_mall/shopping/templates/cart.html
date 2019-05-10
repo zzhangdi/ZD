@@ -1,0 +1,229 @@
+
+{% extends "homepage.html" %}
+{% load static %}
+{% block main %}
+{% block qian %}
+	<div class="search_bar clearfix">
+		<a href="{% url 'homepage' %}	" class="logo fl"><img src="{% static 'images/logo.png' %}"></a>
+		<div class="sub_page_name fl">|&nbsp;&nbsp;&nbsp;&nbsp;购物车</div>
+    {% endblock %}
+		<div class="search_con fr">
+            <form action="{% url 'search' %}">
+			<input type="text" class="input_text fl" name="p" placeholder="搜索商品">
+			<input type="submit" class="input_btn fr" name="" value="搜索">
+            </form>
+		</div>
+    {% block hou %}
+	</div>
+	<div class="total_count">全部商品<em id="count">{{ num }}</em>种</div>
+	<ul class="cart_list_th clearfix">
+		<li class="col01">商品名称</li>
+		<li class="col02">商品单位</li>
+		<li class="col03">商品价格</li>
+		<li class="col04">数量</li>
+		<li class="col05">小计</li>
+		<li class="col06">操作</li>
+	</ul>
+    {% if gwc %}
+    {% for sp in gwc %}
+	<ul class="cart_list_td clearfix">
+		<li class="col01"><input class="select" type="checkbox" name="" checked></li>
+		<li class="col02"><img src="{{ MEDIA_URL }}{{ sp.goods1.img1 }}"></li>
+		<li class="col03">{{ sp.goods1.name }}<br><em>{{ sp.goods1.price }}元/{{ sp.goods1.unit }}</em></li>
+		<li class="col04">{{ sp.goods1.unit }}</li>
+		<li class="col05">{{ sp.goods1.price }}元</li>
+		<li class="col06">
+			<div class="num_add">
+				<a href="javascript:;" class="add fl">+</a>
+				<input type="text" class="num_show fl" data-id="{{ sp.goods1.id }}" value="{{ sp.count }}">
+				<a href="javascript:;" class="minus fl">-</a>
+                <p style="display: none" id="goodsid">{{ sp.goods1.id }}</p>
+			</div>
+		</li>
+		<li class="col07">元</li>
+		<li class="col08"><a href="{% url 'dell' sp.id %}">删除</a></li>
+	</ul>
+    {% endfor %}
+    {% endif %}
+	<ul class="settlements">
+		<li class="col01"><input id="selectAll" type="checkbox" name="" checked=""></li>
+		<li class="col02">全选</li>
+		<li class="col03">合计(不含运费)：<span>¥</span><em id="total"></em>元<br>共计<b id="count1"></b>件商品</li>
+        {% if num == 0 %}
+		    <li class="col04"><a href="">去结算</a></li>
+        {% else %}
+            <li class="col04"><a href="javascript:;" id="jiesuan">去结算</a></li>
+        {% endif %}
+	</ul>
+
+
+	<script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+	<script>
+
+		$('.add').click(function(){
+			// 获取原来的数量
+			var n = parseInt($(this).next('.num_show').val());
+			// 给数量加1
+			$(this).next('.num_show').val(n+1);
+			$('.num_show').change();
+			// // 获取商品单价
+			price = parseFloat($(this).parent().parent().prev().html()) * 100;
+			// // 计算小计
+			sum = price * (n+1);
+			// // 获取小计的元素并赋值
+			$(this).parent().parent().next().text(sum/100 + '元');  //.parent获得当前匹配元素集合中每个元素的祖先元素
+        });
+
+
+        $('.add').click(function(){
+            var count=parseInt($(this).next('.num_show').val());
+            var goodsid=parseInt($(this).next().next().next('#goodsid').html());
+
+            console.log(goodsid,count);
+            {#alert(count,goodsid)#}
+            $.ajax({
+                url:'http://127.0.0.1:8000/gai/',
+                type:'get',
+                data:{
+                    'goodsid': goodsid,
+                    'count':count
+                },
+                dataType:'json',
+            });
+            return false
+         });
+
+
+		$('.minus').click(function() {
+            var n = parseInt($(this).prev('.num_show').val());
+            if (n > 0) {
+                $(this).prev('.num_show').val(n - 1);
+                $('.num_show').change();
+                // // 获取商品单价
+                price = parseFloat($(this).parent().parent().prev().html()) * 100;
+                // // 计算小计
+                sum = price * (n - 1);
+                // // 获取小计的元素并赋值
+                $(this).parent().parent().next().text(sum / 100 + '元')
+            }
+        });
+        $('.minus').click(function(){
+            var count=parseInt($(this).prev('.num_show').val());
+            var goodsid=parseInt($(this).next('#goodsid').html());
+            console.log(goodsid,count);
+            $.ajax({
+                url:'http://127.0.0.1:8000/gai/',
+                type:'get',
+                data:{
+                    'goodsid':goodsid,
+                    'count':count
+                },
+                dataType:'json',
+            });
+            return false
+        });
+
+
+
+		$('.num_show').change(function() {
+			// 获取商品单价
+			price = parseFloat($(this).parent().parent().prev().html()) * 100;
+			// 计算小计
+			sum = price * $(this).val();
+			// 获取小计的元素并赋值
+			$(this).parent().parent().next().text((sum/100).toFixed(2) + '元');
+
+			var count1=parseInt($(this).val());
+            var goodsid=parseInt($(this).next().next('#goodsid').html());
+            console.log(goodsid,count1);
+
+            $.ajax({
+                url:'http://127.0.0.1:8000/gai/',
+                type:'get',
+                data:{
+                    'goodsid':goodsid,
+                    'count':count1
+                },
+                dataType:'json',
+            });
+
+			//商品数量
+            var count = 0;
+            $('.num_show').each(function(i,el){
+               if($(this).parents('ul').find('.select').get(0).checked){
+                   count +=parseInt($(el).val())
+               }
+            });
+            $('#count1').text(count);
+			// 计算总价
+			var total = 0;
+			$('.col07').each(function(i, el){
+				if($(this).parents('ul').find('.select').get(0).checked) {
+					total += parseFloat($(el).text()) * 100
+				}
+			});
+			$('#total').text((total/100).toFixed(2))
+        });
+
+            var count = 0;
+            $('.num_show').each(function(i,el){
+               if($(this).parents('ul').find('.select').get(0).checked){
+                   count +=parseInt($(el).val())
+               }
+            });
+            $('#count1').text(count);
+        //计算小计
+        xiaoji();
+        function xiaoji(){
+            $('.col07').html(function(){
+                num1 = parseFloat($(this).prevAll().filter('.col05').html());
+                num2 = parseInt($(this).prevAll().filter('.col06').find('.num_show').val());
+                return ((num1*100)*(num2*100)/10000).toFixed(2)+'元';
+            })
+        }
+        //总计
+        zongji();
+        function zongji(){
+            var zong = 0;
+            $("input[type='checkbox']").not($('#selectAll')).each(function () {
+                if ($(this).prop('checked')){
+                    zong += parseFloat($(this).parent().nextAll().filter('.col07').html());
+                }
+            });
+            $('#total').html(zong.toFixed(2));
+        }
+
+		// 选择框改变，处理价格和数量计算
+		$('.select').change(function() {
+			n = parseInt($('#count').text());
+			if(this.checked) {
+				$('#count').text(n+1);
+			} else {
+				if(n > 0){
+					$('#count').text(n-1);
+				}
+			}
+			$('.num_show').change()
+		});
+		// 点击全选，计算价格和数量
+		$('#selectAll').change(function(){
+			checked = this.checked;
+			$('.select').each(function(i,el){
+				el.checked = checked
+			});
+			$('.select').change()
+		});
+    // 点击结算按钮进行结算请求
+    $('#jiesuan').click(function () {
+        var data = [];
+        $('.select:checked').parents('.cart_list_td').find('.num_show').each(function (i, el) {
+            data.push($(el).attr('data-id'));
+        });
+        {#$('.select:checked').parents('.cart_list_td').find('.num_show').each(function (i, el) {#}
+        {#    num.push($(el).attr('value'));#}
+        {# });#}
+        $(this).attr('href', '/place_order/?id=' + JSON.stringify(data));
+        });
+	</script>
+{% endblock %}
+{% endblock %}

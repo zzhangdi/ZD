@@ -1,0 +1,96 @@
+{% extends "cart.html" %}
+{% load static %}
+{% block qian %}
+	<div class="search_bar clearfix">
+		<a href="{% url 'homepage' %}" class="logo fl"><img src="{% static 'images/logo.png' %}"></a>
+		<div class="sub_page_name fl">|&nbsp;&nbsp;&nbsp;&nbsp;用户中心</div>
+    {% endblock %}
+    {% block hou %}
+	</div>
+	<div class="main_con clearfix">
+		<div class="left_menu_con clearfix">
+			<h3>用户中心</h3>
+			<ul>
+				<li><a href="{% url 'user_center_info' %}">· 个人信息</a></li>
+				<li><a href="{% url 'user_center_order' %}">· 全部订单</a></li>
+				<li><a href="{% url 'user_center_site' %}" class="active">· 收货地址</a></li>
+			</ul>
+		</div>
+		<div class="right_content clearfix">
+				<h3 class="common_title2">收货地址</h3>
+				<div class="site_con">
+					<dl>
+						<dt>当前地址：</dt>
+						<dd>
+                            {% if addr %}
+                                <select name="" id="" style="font-size:14px">
+                                {% for i in addr %}
+                                <option value="">
+                                    {{ i.site }} &nbsp;&nbsp; ({{ i.name }} &nbsp;收) &nbsp;&nbsp; {{ i.tel }}
+                                </option>
+                                {% endfor %}
+                                </select>
+                            {% else %}(空空如也)
+                            {% endif %}
+                        </dd>
+
+						<!--<dd>北京市 海淀区 东北旺西路8号中关村软件园 （李思 收） 182****7528</dd>-->
+					</dl>
+				</div>
+				<h3 class="common_title2">编辑地址</h3>
+				<div class="site_con">
+					<form action="" method="post">
+						{% csrf_token %}
+						<div class="form_group" required="">
+							<label>收件人：</label>
+							<div>{{ form.non_field_errors }}</div>
+							<input type="text" name="name" id="name">
+							<div class="user_error">{{ form.username.errors }}</div>
+						</div>
+						<div class="form_group form_group2">
+							<label>详细地址：</label>
+							<textarea class="site_area" name="site" id="site"></textarea>
+						</div>
+						<div class="form_group">
+							<label>邮编：</label>
+							<input type="text" name="Zip_Code" id="Zip_Code">
+						</div>
+						<div class="form_group">
+							<label>手机：</label>
+							<input type="text" name="tel" id="tel">
+						</div>
+						<input type="submit" name="" value="提交" class="info_submit">
+
+						<div class="box"></div> <!--异步请求返回结果-->
+
+					</form>
+				</div>
+		</div>
+	</div>
+<script type="text/javascript" src="{% static 'js/jquery-3.3.1.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
+
+<script>
+	$('.info_submit').click(function () {
+		$.ajax({
+			url:'http://127.0.0.1:8000/user_center_site/',
+			type:'post',
+			headers:{
+				'X-CSRFTOKEN':$.cookie('csrftoken')
+			},
+			data:{
+				'name':$('#name').val(),
+				'site':$('#site').val(),
+				'Zip_Code':$('#Zip_Code').val(),
+				'tel':$('#tel').val()
+			},
+			dataType:'json',
+			success:function(res){
+					{#$('.box').html(res.aaa)#}
+					alert(res.aaa),$(location).attr('href','http://127.0.0.1:8000/user_center_site/')
+			}
+		});
+		return false
+	});
+</script>
+{% endblock %}

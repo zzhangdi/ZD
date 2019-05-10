@@ -1,0 +1,178 @@
+{% extends "cart.html" %}
+{% load static %}
+{% block qian %}
+	<div class="search_bar clearfix">
+		<a href="{% url 'homepage' %}" class="logo fl"><img src="{% static '' %}images/logo.png"></a>
+		<div class="sub_page_name fl">|&nbsp;&nbsp;&nbsp;&nbsp;提交订单</div>
+    {% endblock %}
+    {% block hou %}
+	</div>
+	<h3 class="common_title">确认收货地址</h3>
+
+	<div class="common_list_con clearfix">
+		<dl>
+			<dt>寄送到：</dt>
+			<dd>
+            {% if addr %}
+                <select name="" id="" style="font-size:14px">
+                {% for i in addr %}
+                <option value="">
+                    {{ i.site }} &nbsp;&nbsp; ({{ i.name }} &nbsp;收)&nbsp;&nbsp;  {{ i.tel }}
+                </option>
+                {% endfor %}
+                </select>
+            {% else %}
+                (空空如也)
+            {% endif %}
+            </dd>
+		</dl>
+		<a href="{% url 'user_center_site' %}" class="edit_site">编辑收货地址</a>
+
+	</div>
+	
+	<h3 class="common_title">支付方式</h3>	
+	<div class="common_list_con clearfix">
+		<div class="pay_style_con clearfix">
+            {% for pay1 in pay %}
+			<input type="radio" name="pay_style" checked>
+			<label class="{{ pay1.img }}">{{ pay1.name }}</label>  {#支付宝字体设置  class="zhifubao"#}
+{#			<input type="radio" name="pay_style">#}
+{#			<label class="weixin">微信支付</label>#}
+{#			<input type="radio" name="pay_style">#}
+{#			<label class="zhifubao"></label>#}
+{#			<input type="radio" name="pay_style">#}
+{#			<label class="bank">银行卡支付</label>#}
+            {% endfor %}
+		</div>
+	</div>
+
+	<h3 class="common_title">商品列表</h3>
+	
+	<div class="common_list_con clearfix">
+		<ul class="goods_list_th clearfix">
+			<li class="col01">商品名称</li>
+			<li class="col02">商品单位</li>
+			<li class="col03">商品价格</li>
+			<li class="col04">数量</li>
+			<li class="col05">小计</li>		
+		</ul>
+        {% if wdd %}
+        {% for sp in wdd %}
+		<ul class="goods_list_td clearfix">
+			<li class="col01">{{ forloop.counter }}</li>
+			<li class="col02"><img src="{{ MEDIA_URL }}{{ sp.goods.img1 }}"></li>
+			<li class="col03" id="col03">{{ sp.goods.name }}</li>
+            <input type="text" style="display: none" id="id1" data-id="{{ sp.itme_id_id }}">
+			<li class="col04">{{ sp.goods.unit }}</li>
+			<li class="col05">{{ sp.goods.price }}</li>
+			<li class="col06" id="col06">{{ sp.num1 }}</li>
+			<li class="col07" id="col07"></li>
+		</ul>
+        {% endfor %}
+        {% endif %}
+	</div>
+
+	<h3 class="common_title">总金额结算</h3>
+
+	<div class="common_list_con clearfix">
+		<div class="settle_con">
+			<div class="total_goods_count">共<em id="num"></em>件商品，总金额<b id="zong"></b>元</div>
+			<div class="transit">运费：<b>10元</b></div>
+			<div class="total_pay">实付款：<b id="shifu"></b></div>
+		</div>
+	</div>
+
+	<div class="order_submit clearfix">
+		<a href="javascript:;" id="order_btn">提交订单</a>
+	</div>	
+
+	<div class="popup_con">
+		<div class="popup">
+			<p id="box"></p>           {#订单提交成功！  #}
+		</div>
+		
+		<div class="mask"></div>
+	</div>
+	<script type="text/javascript">
+
+        //get传参
+        {#$('#order_btn').click(function () {#}
+        {#    var data = [];#}
+        {#    $('.common_list_con').find('.goods_list_td').find('#id1').each(function () {#}
+        {#        data.push($(this).attr('data-id'));#}
+        {#    });#}
+        {#    $(this).attr('href', '/add1/?ids=' + JSON.stringify(data));#}
+        {# });#}
+
+        $('#order_btn').click(function(){
+            var data1 = [];
+            $('.common_list_con').find('.goods_list_td').find('#id1').val(function () {
+                data1.push($(this).attr('data-id'));
+            });
+            {#data={'data1':data1}#}
+			$.ajax({
+				url:'http://127.0.0.1:8000/add1/?ids=' + JSON.stringify(data1),
+				type:'get',
+				dataType:'json',
+        success:function (res) {
+            if(res.a =='订单提交成功！') {
+                $('#box').html(res.a),
+                localStorage.setItem('order_finish',2);
+                $('.popup_con').fadeIn('fast', function () {
+                    setTimeout(function () {
+                        $('.popup_con').fadeOut('fast', function () {
+                                $(location).attr('href', 'http://127.0.0.1:8000')
+                        });
+                    }, 3000)
+
+                });
+            }
+            else{$('#box').html(res.a),
+                localStorage.setItem('order_finish',2);
+                $('.popup_con').fadeIn('fast', function () {
+                    setTimeout(function () {
+                        $('.popup_con').fadeOut('fast', function () {
+                                $(location).attr('href', 'http://127.0.0.1:8000')
+                        });
+                    }, 3000)
+
+                });
+                }
+                }
+            });
+            return false
+        });
+
+        //商品数量
+        $('#num').html (function () {
+            var count = 0;
+            $('.col06').each(function () {
+                count += parseInt($(this).html());
+            });
+            $('#num').html(count);
+        });
+        //计算小计
+        xiaoji();
+        function xiaoji(){
+            $('.col07').html(function(){
+                num1 = parseFloat($(this).prevAll().filter('.col05').html());
+                num2 = parseInt($(this).prevAll().filter('.col06').html());
+                return ((num1*100)*(num2*100)/10000).toFixed(2)+'元';
+            })
+        }
+
+        //计算总金额
+        $('#zong').html (function (){
+            var zong = 0;
+            $('.col07').each(function () {
+                zong += parseFloat($(this).html());
+            });
+            $('#zong').html(zong.toFixed(2));
+        });
+
+        //计算实付金额
+        $('#shifu').html(function () {
+            return (parseFloat($('#zong').html())+10).toFixed(2)+'元';
+        });
+	</script>
+{% endblock %}
